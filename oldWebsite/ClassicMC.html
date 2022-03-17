@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title {
+                z-index: -1;
+                color: rgb(105, 170, 108);
+                position: fixed;
+                font-family: 'Trebuchet MS', sans-serif;
+                background-color: rgb(185, 255, 176);
+                width: 1300px;
+                top: -40px;
+                left: -20px;
+                border: 0px solid green;
+                padding: 50px;
+                margin: 20px;
+            }
+            .main {
+                color:rgb(0, 128, 11);
+                font-family: 'Trebuchet MS', sans-serif;
+                transition: transform .2s;
+                position: relative;
+                top: 300px;
+                left: 580px;
+                font-size: 30px;
+                position: fixed;
+            }
+            .main:hover {
+                opacity: 0.5;
+                font-size: 40;
+                transform: scale(1.5);
+            }
+
+            .info:hover {
+                transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+            .main2 {
+                color:darkgreen;
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 15px;
+                position: absolute;
+                bottom: 0;
+                left: 10;
+            }
+            .info {
+                font-family: 'Trebuchet MS', sans-serif;
+                color: rgb(105, 170, 108);
+                transition: transform .2s; /* Animation */
+                list-style: none;
+                font-size: 30px;
+                margin-left: auto;
+                position: fixed;
+            }
+            a:link {
+                color: lightgreen;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: lightgreen;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: rgb(103, 238, 103);
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:active {
+                color: lightgreen;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            body {
+                background-color: rgb(124, 255, 130)
+            }
+        </style>
+    </head>    
+
+    <body>
+        <div style = "position:relative; left:950px; top:10px;">
+        <h2 align = "center" class="info">
+            <a href="ClassicMCGames.html">
+                Games
+            </a>
+        </h2>
+        </div>
+
+        <div style = "position:relative; left:1120px; top:5px;">
+        <h3 class="info" align ="center">
+            <a href="ClassicMCAbout.html">
+                about
+            </a>
+        </h3>
+        </div>
+        <h1 align="top left" class="title">
+            ClassicMC Studios
+        </h1>
+       
+        <p align="center"class="main">
+            I make games
+        </p>
+        <p class="main2">
+            Made by, ClassicMC
+        </p>
+    </body>   
+</html>
