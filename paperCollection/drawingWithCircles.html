@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drawing With Circles</title>
+        <script type="text/javascript" src = "paper-full.js"></script>
+        <style>
+            html,body {
+                height: 100%;
+            }
+
+            /* Scale canvas with resize attribute to full size */
+            canvas[resize] {
+                width: 100%;
+                height: 100%;
+            }
+            #myCanvas{
+                position:fixed;
+            }
+        </style>
+        <script type="text/paperscript" canvas = "myCanvas">
+            var size = 10
+            var circlePath = new Path.Circle(new Point(-10, -10), size);
+            circlePath.strokeColor = 'black';
+            circlePath.fillColor = 'black';
+
+            function onMouseDrag(event){
+                var cloneC = circlePath.clone();
+                cloneC.position = event.point;	
+            }
+            function onKeyDown(event){
+                if(event.key === "space"){
+                    circlePath.bringToFront();
+                    circlePath.fillColor = 'white';
+                    circlePath.strokeColor = 'white';
+                    size = 20
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id = "myCanvas" resize="true"></canvas>
+    </body>
+</html>
