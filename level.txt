@@ -1,0 +1,5 @@
+; Lines are 12-3
+; # = wall, @ = playerStartPosition, * = special, - = null
+####----####
+#--*-----@--
+############
