@@ -6,6 +6,7 @@ lines = textRead.split('\n')
 # Set up arrays
 ll = []
 player = []
+ogplayer = [0,0]
 toPrintArray = []
 def level():
     # Pull letters from file
@@ -40,10 +41,29 @@ def level():
         toPrint = ''
 def draw():
     # Draws the canvas using the print array
-    print(f'x:{player[0]} y:{player[1]}')
+    print(f'x:{player[1]} y:{player[0]}')
     update = 0
     for i in toPrintArray:
         print(toPrintArray[update])
         update += 1
-level()
-draw()
+def move():
+    move = input("render/move>")
+    if(move == "w"):
+        player[0] -= 1
+    elif(move == "s"):
+        player[0] += 1
+    elif(move == "a"):
+        player[1] -= 1
+    elif(move == "d"):
+        player[1] += 1
+    elif(move == "debug"):
+        print(ll)
+        print(player)
+        print(toPrintArray)
+        print(ogplayer)
+    # ReRender player
+while True:
+    level()
+    move()
+    draw()
+    (ll[player[0]])[player[1]] = '@'
