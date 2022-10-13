@@ -63,7 +63,9 @@ def move():
         print(ogplayer)
     # ReRender player
 while True:
+    toPrintArray.clear()
     level()
     move()
     draw()
     (ll[player[0]])[player[1]] = '@'
+    print(toPrintArray)
